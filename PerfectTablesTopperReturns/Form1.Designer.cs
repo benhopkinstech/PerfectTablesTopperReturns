@@ -380,6 +380,7 @@
             this.btnSearchColour.TabIndex = 25;
             this.btnSearchColour.Text = "Search Colour";
             this.btnSearchColour.UseVisualStyleBackColor = true;
+            this.btnSearchColour.Click += new System.EventHandler(this.btnSearchColour_Click);
             // 
             // btnSearchNumber
             // 
