@@ -1,10 +1,13 @@
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace PerfectTablesTopperReturns
 {
     public partial class Form1 : Form
     {
+        string connectionString = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+
         public Form1()
         {
             InitializeComponent();
@@ -17,7 +20,7 @@ namespace PerfectTablesTopperReturns
             string colour = cmbColour.GetItemText(cmbColour.SelectedItem);
             int number = (int)numNumber.Value;
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into Returns(Size, Design, Colour, Number) values (@Size, @Design, @Colour, @Number)", con);
             cmd.Parameters.AddWithValue("@Size", size);
@@ -38,7 +41,7 @@ namespace PerfectTablesTopperReturns
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "select * from Returns";
             using (var adapter = new SqlDataAdapter(query, con))
@@ -52,7 +55,7 @@ namespace PerfectTablesTopperReturns
 
         private void btnSearchSize_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "select * from Returns where Size='" + cmbColour.GetItemText(cmbSizeS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
@@ -66,7 +69,7 @@ namespace PerfectTablesTopperReturns
 
         private void btnSearchDesign_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "select * from Returns where Design='" + cmbColour.GetItemText(cmbDesignS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
@@ -80,7 +83,7 @@ namespace PerfectTablesTopperReturns
 
         private void btnSearchColour_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "select * from Returns where Colour='" + cmbColour.GetItemText(cmbColourS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
@@ -94,7 +97,7 @@ namespace PerfectTablesTopperReturns
 
         private void btnSearchNumber_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "select * from Returns where Number='" + (int)numNumberS.Value + "'";
             using (var adapter = new SqlDataAdapter(query, con))
@@ -111,7 +114,7 @@ namespace PerfectTablesTopperReturns
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this row?", "Deletion Prompt", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(connectionString);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("delete from Returns where Id='" + dataFound.SelectedRows[0].Cells[0].Value.ToString() + "'", con);
                 dataFound.Rows.RemoveAt(dataFound.SelectedRows[0].Index);
