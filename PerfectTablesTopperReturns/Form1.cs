@@ -108,13 +108,21 @@ namespace PerfectTablesTopperReturns
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("delete from Returns where Id='" + dataFound.SelectedRows[0].Cells[0].Value.ToString() + "'", con);
-            dataFound.Rows.RemoveAt(dataFound.SelectedRows[0].Index);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Row Deleted");
-            con.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this row?", "Deletion Prompt", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Returns where Id='" + dataFound.SelectedRows[0].Cells[0].Value.ToString() + "'", con);
+                dataFound.Rows.RemoveAt(dataFound.SelectedRows[0].Index);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Row Deleted");
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Row not removed");
+            }
         }
     }
 }
