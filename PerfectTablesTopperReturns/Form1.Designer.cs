@@ -360,6 +360,7 @@
             this.btnSearchSize.TabIndex = 23;
             this.btnSearchSize.Text = "Search Size";
             this.btnSearchSize.UseVisualStyleBackColor = true;
+            this.btnSearchSize.Click += new System.EventHandler(this.btnSearchSize_Click);
             // 
             // btnSearchDesign
             // 

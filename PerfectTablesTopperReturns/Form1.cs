@@ -36,16 +36,25 @@ namespace PerfectTablesTopperReturns
             con.Close();
         }
 
-        private void btnSearchReturns_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
             string query = "select Size, Design, Colour, Number from Returns";
+            using (var adapter = new SqlDataAdapter(query, con))
+            {
+                var table = new DataTable();
+                adapter.Fill(table);
+                dataFound.DataSource = table;
+            }
+            con.Close();
+        }
+
+        private void btnSearchSize_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            con.Open();
+            string query = "select Size, Design, Colour, Number from Returns where Size='" + cmbColour.GetItemText(cmbSizeS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
