@@ -54,6 +54,7 @@
             this.btnSearchDesign = new System.Windows.Forms.Button();
             this.btnSearchColour = new System.Windows.Forms.Button();
             this.btnSearchNumber = new System.Windows.Forms.Button();
+            this.btnDeleteRow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumberS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataFound)).BeginInit();
@@ -339,12 +340,13 @@
             this.dataFound.Location = new System.Drawing.Point(305, 29);
             this.dataFound.Name = "dataFound";
             this.dataFound.RowTemplate.Height = 25;
-            this.dataFound.Size = new System.Drawing.Size(470, 307);
+            this.dataFound.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataFound.Size = new System.Drawing.Size(575, 307);
             this.dataFound.TabIndex = 21;
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(658, 342);
+            this.btnViewAll.Location = new System.Drawing.Point(763, 342);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(117, 23);
             this.btnViewAll.TabIndex = 22;
@@ -392,11 +394,22 @@
             this.btnSearchNumber.UseVisualStyleBackColor = true;
             this.btnSearchNumber.Click += new System.EventHandler(this.btnSearchNumber_Click);
             // 
+            // btnDeleteRow
+            // 
+            this.btnDeleteRow.Location = new System.Drawing.Point(305, 342);
+            this.btnDeleteRow.Name = "btnDeleteRow";
+            this.btnDeleteRow.Size = new System.Drawing.Size(134, 23);
+            this.btnDeleteRow.TabIndex = 27;
+            this.btnDeleteRow.Text = "Delete Selected Row";
+            this.btnDeleteRow.UseVisualStyleBackColor = true;
+            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 373);
+            this.ClientSize = new System.Drawing.Size(890, 373);
+            this.Controls.Add(this.btnDeleteRow);
             this.Controls.Add(this.btnSearchNumber);
             this.Controls.Add(this.btnSearchColour);
             this.Controls.Add(this.btnSearchDesign);
@@ -461,5 +474,6 @@
         private Button btnSearchDesign;
         private Button btnSearchColour;
         private Button btnSearchNumber;
+        private Button btnDeleteRow;
     }
 }

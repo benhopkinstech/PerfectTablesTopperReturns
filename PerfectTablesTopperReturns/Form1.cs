@@ -40,7 +40,7 @@ namespace PerfectTablesTopperReturns
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
-            string query = "select Size, Design, Colour, Number from Returns";
+            string query = "select * from Returns";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
@@ -54,7 +54,7 @@ namespace PerfectTablesTopperReturns
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
-            string query = "select Size, Design, Colour, Number from Returns where Size='" + cmbColour.GetItemText(cmbSizeS.SelectedItem) + "'";
+            string query = "select * from Returns where Size='" + cmbColour.GetItemText(cmbSizeS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
@@ -68,7 +68,7 @@ namespace PerfectTablesTopperReturns
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
-            string query = "select Size, Design, Colour, Number from Returns where Design='" + cmbColour.GetItemText(cmbDesignS.SelectedItem) + "'";
+            string query = "select * from Returns where Design='" + cmbColour.GetItemText(cmbDesignS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
@@ -82,7 +82,7 @@ namespace PerfectTablesTopperReturns
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
-            string query = "select Size, Design, Colour, Number from Returns where Colour='" + cmbColour.GetItemText(cmbColourS.SelectedItem) + "'";
+            string query = "select * from Returns where Colour='" + cmbColour.GetItemText(cmbColourS.SelectedItem) + "'";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
@@ -96,13 +96,24 @@ namespace PerfectTablesTopperReturns
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
             con.Open();
-            string query = "select Size, Design, Colour, Number from Returns where Number='" + (int)numNumberS.Value + "'";
+            string query = "select * from Returns where Number='" + (int)numNumberS.Value + "'";
             using (var adapter = new SqlDataAdapter(query, con))
             {
                 var table = new DataTable();
                 adapter.Fill(table);
                 dataFound.DataSource = table;
             }
+            con.Close();
+        }
+
+        private void btnDeleteRow_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\benho\source\repos\PerfectTablesTopperReturns\PerfectTablesTopperReturns\db.mdf;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Returns where Id='" + dataFound.SelectedRows[0].Cells[0].Value.ToString() + "'", con);
+            dataFound.Rows.RemoveAt(dataFound.SelectedRows[0].Index);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Row Deleted");
             con.Close();
         }
     }
