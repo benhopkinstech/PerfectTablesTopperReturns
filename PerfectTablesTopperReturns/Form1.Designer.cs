@@ -370,6 +370,7 @@
             this.btnSearchDesign.TabIndex = 24;
             this.btnSearchDesign.Text = "Search Design";
             this.btnSearchDesign.UseVisualStyleBackColor = true;
+            this.btnSearchDesign.Click += new System.EventHandler(this.btnSearchDesign_Click);
             // 
             // btnSearchColour
             // 
