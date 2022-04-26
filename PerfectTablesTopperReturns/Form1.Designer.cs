@@ -390,6 +390,7 @@
             this.btnSearchNumber.TabIndex = 26;
             this.btnSearchNumber.Text = "Search Number";
             this.btnSearchNumber.UseVisualStyleBackColor = true;
+            this.btnSearchNumber.Click += new System.EventHandler(this.btnSearchNumber_Click);
             // 
             // Form1
             // 
