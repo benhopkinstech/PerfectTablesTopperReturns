@@ -20,23 +20,30 @@ namespace PerfectTablesTopperReturns
             string colour = cmbColour.GetItemText(cmbColour.SelectedItem);
             int number = (int)numNumber.Value;
 
-            SqlConnection con = new SqlConnection(connectionString);
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Returns(Size, Design, Colour, Number) values (@Size, @Design, @Colour, @Number)", con);
-            cmd.Parameters.AddWithValue("@Size", size);
-            cmd.Parameters.AddWithValue("@Design", design);
-            cmd.Parameters.AddWithValue("@Colour", colour);
-            cmd.Parameters.AddWithValue("@Number", number);
-            int i = cmd.ExecuteNonQuery();
-            if (i > 0)
+            if (cmbSize.SelectedItem != null & cmbDesign.SelectedItem != null & cmbColour.SelectedItem != null)
             {
-                MessageBox.Show("Added " + size + " " + design + " " + colour + " Number " + number);
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into Returns(Size, Design, Colour, Number) values (@Size, @Design, @Colour, @Number)", con);
+                cmd.Parameters.AddWithValue("@Size", size);
+                cmd.Parameters.AddWithValue("@Design", design);
+                cmd.Parameters.AddWithValue("@Colour", colour);
+                cmd.Parameters.AddWithValue("@Number", number);
+                int i = cmd.ExecuteNonQuery();
+                con.Close();
+                if (i > 0)
+                {
+                    MessageBox.Show("Added the following return\n\n" + size + "\n" + design + "\n" + colour + "\nNumber: " + number);
+                }
+                else
+                {
+                    MessageBox.Show("FAILED: Return not added");
+                }
             }
             else
             {
-                MessageBox.Show("FAILED: Return not added");
+                MessageBox.Show("Please ensure you have selected an option for the size, design, colour and number");
             }
-            con.Close();
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
