@@ -51,6 +51,8 @@ namespace PerfectTablesTopperReturns
                 dataFound.DataSource = table;
             }
             con.Close();
+            int results = dataFound.Rows.Count - 1;
+            txtResults.Text = results.ToString();
         }
 
         private void btnSearchSize_Click(object sender, EventArgs e)
@@ -65,6 +67,8 @@ namespace PerfectTablesTopperReturns
                 dataFound.DataSource = table;
             }
             con.Close();
+            int results = dataFound.Rows.Count - 1;
+            txtResults.Text = results.ToString();
         }
 
         private void btnSearchDesign_Click(object sender, EventArgs e)
@@ -79,6 +83,8 @@ namespace PerfectTablesTopperReturns
                 dataFound.DataSource = table;
             }
             con.Close();
+            int results = dataFound.Rows.Count - 1;
+            txtResults.Text = results.ToString();
         }
 
         private void btnSearchColour_Click(object sender, EventArgs e)
@@ -93,6 +99,8 @@ namespace PerfectTablesTopperReturns
                 dataFound.DataSource = table;
             }
             con.Close();
+            int results = dataFound.Rows.Count - 1;
+            txtResults.Text = results.ToString();
         }
 
         private void btnSearchNumber_Click(object sender, EventArgs e)
@@ -107,6 +115,8 @@ namespace PerfectTablesTopperReturns
                 dataFound.DataSource = table;
             }
             con.Close();
+            int results = dataFound.Rows.Count - 1;
+            txtResults.Text = results.ToString();
         }
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
@@ -119,8 +129,10 @@ namespace PerfectTablesTopperReturns
                 SqlCommand cmd = new SqlCommand("delete from Returns where Id='" + dataFound.SelectedRows[0].Cells[0].Value.ToString() + "'", con);
                 dataFound.Rows.RemoveAt(dataFound.SelectedRows[0].Index);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Row Deleted");
                 con.Close();
+                int results = dataFound.Rows.Count - 1;
+                txtResults.Text = results.ToString();
+                MessageBox.Show("Row Deleted");
             }
             else
             {

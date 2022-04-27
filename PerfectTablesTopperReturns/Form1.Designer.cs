@@ -55,6 +55,8 @@
             this.btnSearchColour = new System.Windows.Forms.Button();
             this.btnSearchNumber = new System.Windows.Forms.Button();
             this.btnDeleteRow = new System.Windows.Forms.Button();
+            this.txtNumberResults = new System.Windows.Forms.Label();
+            this.txtResults = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumberS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataFound)).BeginInit();
@@ -404,11 +406,30 @@
             this.btnDeleteRow.UseVisualStyleBackColor = true;
             this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
             // 
+            // txtNumberResults
+            // 
+            this.txtNumberResults.AutoSize = true;
+            this.txtNumberResults.Location = new System.Drawing.Point(504, 346);
+            this.txtNumberResults.Name = "txtNumberResults";
+            this.txtNumberResults.Size = new System.Drawing.Size(108, 15);
+            this.txtNumberResults.TabIndex = 28;
+            this.txtNumberResults.Text = "Number of Results:";
+            // 
+            // txtResults
+            // 
+            this.txtResults.AutoSize = true;
+            this.txtResults.Location = new System.Drawing.Point(612, 346);
+            this.txtResults.Name = "txtResults";
+            this.txtResults.Size = new System.Drawing.Size(0, 15);
+            this.txtResults.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 373);
+            this.Controls.Add(this.txtResults);
+            this.Controls.Add(this.txtNumberResults);
             this.Controls.Add(this.btnDeleteRow);
             this.Controls.Add(this.btnSearchNumber);
             this.Controls.Add(this.btnSearchColour);
@@ -475,5 +496,7 @@
         private Button btnSearchColour;
         private Button btnSearchNumber;
         private Button btnDeleteRow;
+        private Label txtNumberResults;
+        private Label txtResults;
     }
 }
