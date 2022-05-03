@@ -65,7 +65,7 @@
             // txtAddReturn
             // 
             this.txtAddReturn.AutoSize = true;
-            this.txtAddReturn.Location = new System.Drawing.Point(5, 175);
+            this.txtAddReturn.Location = new System.Drawing.Point(5, 198);
             this.txtAddReturn.Name = "txtAddReturn";
             this.txtAddReturn.Size = new System.Drawing.Size(73, 15);
             this.txtAddReturn.TabIndex = 0;
@@ -82,7 +82,7 @@
             "6 x 5-6cm Wide",
             "12cm Wide",
             "15cm Wide"});
-            this.cmbSize.Location = new System.Drawing.Point(61, 193);
+            this.cmbSize.Location = new System.Drawing.Point(81, 223);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Size = new System.Drawing.Size(121, 23);
             this.cmbSize.TabIndex = 1;
@@ -98,7 +98,7 @@
             "Groovy",
             "Ornate",
             "Crown Curly"});
-            this.cmbDesign.Location = new System.Drawing.Point(61, 222);
+            this.cmbDesign.Location = new System.Drawing.Point(81, 252);
             this.cmbDesign.Name = "cmbDesign";
             this.cmbDesign.Size = new System.Drawing.Size(121, 23);
             this.cmbDesign.TabIndex = 2;
@@ -146,7 +146,7 @@
             "Green Mirror ST072",
             "Rose Gold Mirror ST074",
             "Pink Mirror ST075"});
-            this.cmbColour.Location = new System.Drawing.Point(61, 251);
+            this.cmbColour.Location = new System.Drawing.Point(81, 281);
             this.cmbColour.Name = "cmbColour";
             this.cmbColour.Size = new System.Drawing.Size(121, 23);
             this.cmbColour.TabIndex = 3;
@@ -154,7 +154,7 @@
             // txtSize
             // 
             this.txtSize.AutoSize = true;
-            this.txtSize.Location = new System.Drawing.Point(28, 196);
+            this.txtSize.Location = new System.Drawing.Point(30, 226);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(27, 15);
             this.txtSize.TabIndex = 4;
@@ -163,7 +163,7 @@
             // txtDesign
             // 
             this.txtDesign.AutoSize = true;
-            this.txtDesign.Location = new System.Drawing.Point(17, 225);
+            this.txtDesign.Location = new System.Drawing.Point(18, 255);
             this.txtDesign.Name = "txtDesign";
             this.txtDesign.Size = new System.Drawing.Size(43, 15);
             this.txtDesign.TabIndex = 5;
@@ -172,7 +172,7 @@
             // txtColour
             // 
             this.txtColour.AutoSize = true;
-            this.txtColour.Location = new System.Drawing.Point(13, 254);
+            this.txtColour.Location = new System.Drawing.Point(18, 284);
             this.txtColour.Name = "txtColour";
             this.txtColour.Size = new System.Drawing.Size(43, 15);
             this.txtColour.TabIndex = 6;
@@ -180,7 +180,7 @@
             // 
             // btnAddReturn
             // 
-            this.btnAddReturn.Location = new System.Drawing.Point(62, 310);
+            this.btnAddReturn.Location = new System.Drawing.Point(82, 340);
             this.btnAddReturn.Name = "btnAddReturn";
             this.btnAddReturn.Size = new System.Drawing.Size(120, 23);
             this.btnAddReturn.TabIndex = 7;
@@ -191,7 +191,7 @@
             // txtNumber
             // 
             this.txtNumber.AutoSize = true;
-            this.txtNumber.Location = new System.Drawing.Point(5, 282);
+            this.txtNumber.Location = new System.Drawing.Point(10, 312);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(51, 15);
             this.txtNumber.TabIndex = 8;
@@ -199,7 +199,7 @@
             // 
             // numNumber
             // 
-            this.numNumber.Location = new System.Drawing.Point(62, 280);
+            this.numNumber.Location = new System.Drawing.Point(82, 310);
             this.numNumber.Name = "numNumber";
             this.numNumber.Size = new System.Drawing.Size(120, 23);
             this.numNumber.TabIndex = 10;
@@ -215,7 +215,7 @@
             // 
             // numNumberS
             // 
-            this.numNumberS.Location = new System.Drawing.Point(62, 137);
+            this.numNumberS.Location = new System.Drawing.Point(81, 144);
             this.numNumberS.Name = "numNumberS";
             this.numNumberS.Size = new System.Drawing.Size(120, 23);
             this.numNumberS.TabIndex = 20;
@@ -223,7 +223,7 @@
             // txtNumberS
             // 
             this.txtNumberS.AutoSize = true;
-            this.txtNumberS.Location = new System.Drawing.Point(5, 139);
+            this.txtNumberS.Location = new System.Drawing.Point(9, 147);
             this.txtNumberS.Name = "txtNumberS";
             this.txtNumberS.Size = new System.Drawing.Size(51, 15);
             this.txtNumberS.TabIndex = 19;
@@ -232,7 +232,7 @@
             // txtColourS
             // 
             this.txtColourS.AutoSize = true;
-            this.txtColourS.Location = new System.Drawing.Point(13, 111);
+            this.txtColourS.Location = new System.Drawing.Point(17, 118);
             this.txtColourS.Name = "txtColourS";
             this.txtColourS.Size = new System.Drawing.Size(43, 15);
             this.txtColourS.TabIndex = 17;
@@ -241,7 +241,7 @@
             // txtDesignS
             // 
             this.txtDesignS.AutoSize = true;
-            this.txtDesignS.Location = new System.Drawing.Point(17, 82);
+            this.txtDesignS.Location = new System.Drawing.Point(17, 89);
             this.txtDesignS.Name = "txtDesignS";
             this.txtDesignS.Size = new System.Drawing.Size(43, 15);
             this.txtDesignS.TabIndex = 16;
@@ -250,7 +250,7 @@
             // txtSizeS
             // 
             this.txtSizeS.AutoSize = true;
-            this.txtSizeS.Location = new System.Drawing.Point(28, 53);
+            this.txtSizeS.Location = new System.Drawing.Point(33, 60);
             this.txtSizeS.Name = "txtSizeS";
             this.txtSizeS.Size = new System.Drawing.Size(27, 15);
             this.txtSizeS.TabIndex = 15;
@@ -299,7 +299,7 @@
             "Green Mirror ST072",
             "Rose Gold Mirror ST074",
             "Pink Mirror ST075"});
-            this.cmbColourS.Location = new System.Drawing.Point(61, 108);
+            this.cmbColourS.Location = new System.Drawing.Point(80, 115);
             this.cmbColourS.Name = "cmbColourS";
             this.cmbColourS.Size = new System.Drawing.Size(121, 23);
             this.cmbColourS.TabIndex = 14;
@@ -315,7 +315,7 @@
             "Groovy",
             "Ornate",
             "Crown Curly"});
-            this.cmbDesignS.Location = new System.Drawing.Point(61, 79);
+            this.cmbDesignS.Location = new System.Drawing.Point(80, 86);
             this.cmbDesignS.Name = "cmbDesignS";
             this.cmbDesignS.Size = new System.Drawing.Size(121, 23);
             this.cmbDesignS.TabIndex = 13;
@@ -331,7 +331,7 @@
             "6 x 5-6cm Wide",
             "12cm Wide",
             "15cm Wide"});
-            this.cmbSizeS.Location = new System.Drawing.Point(61, 50);
+            this.cmbSizeS.Location = new System.Drawing.Point(80, 57);
             this.cmbSizeS.Name = "cmbSizeS";
             this.cmbSizeS.Size = new System.Drawing.Size(121, 23);
             this.cmbSizeS.TabIndex = 12;
@@ -339,7 +339,7 @@
             // dataFound
             // 
             this.dataFound.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFound.Location = new System.Drawing.Point(305, 29);
+            this.dataFound.Location = new System.Drawing.Point(334, 32);
             this.dataFound.Name = "dataFound";
             this.dataFound.RowTemplate.Height = 25;
             this.dataFound.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -348,7 +348,7 @@
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(763, 342);
+            this.btnViewAll.Location = new System.Drawing.Point(792, 345);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(117, 23);
             this.btnViewAll.TabIndex = 22;
@@ -358,9 +358,9 @@
             // 
             // btnSearchSize
             // 
-            this.btnSearchSize.Location = new System.Drawing.Point(188, 50);
+            this.btnSearchSize.Location = new System.Drawing.Point(207, 57);
             this.btnSearchSize.Name = "btnSearchSize";
-            this.btnSearchSize.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchSize.Size = new System.Drawing.Size(121, 23);
             this.btnSearchSize.TabIndex = 23;
             this.btnSearchSize.Text = "Search Size";
             this.btnSearchSize.UseVisualStyleBackColor = true;
@@ -368,9 +368,9 @@
             // 
             // btnSearchDesign
             // 
-            this.btnSearchDesign.Location = new System.Drawing.Point(188, 79);
+            this.btnSearchDesign.Location = new System.Drawing.Point(207, 86);
             this.btnSearchDesign.Name = "btnSearchDesign";
-            this.btnSearchDesign.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchDesign.Size = new System.Drawing.Size(121, 23);
             this.btnSearchDesign.TabIndex = 24;
             this.btnSearchDesign.Text = "Search Design";
             this.btnSearchDesign.UseVisualStyleBackColor = true;
@@ -378,9 +378,9 @@
             // 
             // btnSearchColour
             // 
-            this.btnSearchColour.Location = new System.Drawing.Point(188, 108);
+            this.btnSearchColour.Location = new System.Drawing.Point(207, 115);
             this.btnSearchColour.Name = "btnSearchColour";
-            this.btnSearchColour.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchColour.Size = new System.Drawing.Size(121, 23);
             this.btnSearchColour.TabIndex = 25;
             this.btnSearchColour.Text = "Search Colour";
             this.btnSearchColour.UseVisualStyleBackColor = true;
@@ -388,9 +388,9 @@
             // 
             // btnSearchNumber
             // 
-            this.btnSearchNumber.Location = new System.Drawing.Point(188, 137);
+            this.btnSearchNumber.Location = new System.Drawing.Point(207, 144);
             this.btnSearchNumber.Name = "btnSearchNumber";
-            this.btnSearchNumber.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchNumber.Size = new System.Drawing.Size(121, 23);
             this.btnSearchNumber.TabIndex = 26;
             this.btnSearchNumber.Text = "Search Number";
             this.btnSearchNumber.UseVisualStyleBackColor = true;
@@ -398,7 +398,7 @@
             // 
             // btnDeleteRow
             // 
-            this.btnDeleteRow.Location = new System.Drawing.Point(305, 342);
+            this.btnDeleteRow.Location = new System.Drawing.Point(334, 345);
             this.btnDeleteRow.Name = "btnDeleteRow";
             this.btnDeleteRow.Size = new System.Drawing.Size(134, 23);
             this.btnDeleteRow.TabIndex = 27;
@@ -409,7 +409,7 @@
             // txtNumberResults
             // 
             this.txtNumberResults.AutoSize = true;
-            this.txtNumberResults.Location = new System.Drawing.Point(504, 346);
+            this.txtNumberResults.Location = new System.Drawing.Point(557, 348);
             this.txtNumberResults.Name = "txtNumberResults";
             this.txtNumberResults.Size = new System.Drawing.Size(108, 15);
             this.txtNumberResults.TabIndex = 28;
@@ -418,7 +418,7 @@
             // txtResults
             // 
             this.txtResults.AutoSize = true;
-            this.txtResults.Location = new System.Drawing.Point(612, 346);
+            this.txtResults.Location = new System.Drawing.Point(671, 348);
             this.txtResults.Name = "txtResults";
             this.txtResults.Size = new System.Drawing.Size(0, 15);
             this.txtResults.TabIndex = 29;
@@ -427,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 373);
+            this.ClientSize = new System.Drawing.Size(917, 373);
             this.Controls.Add(this.txtResults);
             this.Controls.Add(this.txtNumberResults);
             this.Controls.Add(this.btnDeleteRow);
